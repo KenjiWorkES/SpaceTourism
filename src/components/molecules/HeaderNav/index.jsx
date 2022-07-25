@@ -7,10 +7,10 @@ const HeaderNav = ({ isActive }) => {
   return (
     <nav className={sideBarClasses}>
       <ul className="header__list">
-        <HeaderItem />
-        <HeaderItem />
-        <HeaderItem />
-        <HeaderItem />
+        <HeaderItem index="01" text="Home" link="/" />
+        <HeaderItem index="02" text="Destination" link="/destination" />
+        <HeaderItem index="03" text="Crew" link="/crew" />
+        <HeaderItem index="04" text="technology" link="/technology" />
       </ul>
     </nav>
   );
