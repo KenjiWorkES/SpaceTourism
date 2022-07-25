@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+  }
+
+  &__burguer {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2.1rem;
+    width: 2.4rem;
+  }
+
+  &__line {
+    width: 2.4rem;
+    height: 3px;
+    background-color: $color-secondary;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 2.4rem;
+      height: 3px;
+      background-color: $color-secondary;
+      position: absolute;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateY(-1rem);
+    }
+
+    &::after {
+      transform: translateY(1rem);
+      left: 0;
+    }
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__label {
+  }
+
+  &__text {
+  }
+}
