@@ -55,6 +55,16 @@
     backdrop-filter: blur(8.1rem);
     width: 25.4rem;
     padding: 11.8rem 3.2rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.2s;
+
+    &:target {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
   }
 
   &__list {
