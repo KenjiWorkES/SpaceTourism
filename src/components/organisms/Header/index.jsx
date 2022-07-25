@@ -1,15 +1,24 @@
+import React, { useState } from "react";
+
 import { HeaderNav } from "../../molecules";
 
 const Header = () => {
+  const [active, setActive] = useState(false);
+
+  const burguerClasses =
+    "header__line " + (active ? "header__line--active" : "");
+
+  const toggleSidebar = () => {
+    setActive(!active);
+  };
+
   return (
     <header className="header">
       <img src="/assets/shared/logo.svg" alt="" className="header__logo" />
-      <HeaderNav />
-      <a href="#nav">
-        <button className="header__burguer">
-          <span className="header__line"></span>
-        </button>
-      </a>
+      <HeaderNav isActive={active} />
+      <button onClick={toggleSidebar} className="header__burguer">
+        <span className={burguerClasses}></span>
+      </button>
     </header>
   );
 };

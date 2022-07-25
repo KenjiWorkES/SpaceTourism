@@ -1,8 +1,11 @@
 import { HeaderItem } from "../../atoms";
 
-const HeaderNav = () => {
+const HeaderNav = ({ isActive }) => {
+  const sideBarClasses =
+    "header__nav " + (isActive ? "header__nav--active" : "");
+
   return (
-    <nav className="header__nav" id="nav">
+    <nav className={sideBarClasses}>
       <ul className="header__list">
         <HeaderItem />
         <HeaderItem />

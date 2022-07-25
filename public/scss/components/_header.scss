@@ -33,6 +33,7 @@
       height: 3px;
       background-color: $color-secondary;
       position: absolute;
+      transition: all 0.2s;
     }
 
     &::before {
@@ -43,6 +44,20 @@
     &::after {
       transform: translateY(1rem);
       left: 0;
+    }
+
+    &--active {
+      width: 0;
+
+      &::before {
+        left: 0;
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(0) rotate(135deg);
+        left: 0;
+      }
     }
   }
 
@@ -60,7 +75,7 @@
     transform: translateX(100%);
     transition: all 0.2s;
 
-    &:target {
+    &--active {
       opacity: 1;
       visibility: visible;
       transform: translateX(0);
