@@ -1,7 +1,8 @@
 import "./App.scss";
+import { HomePage } from "../src/components/pages";
 
 function App() {
-  return <h1>teste</h1>;
+  return <HomePage />;
 }
 
 export default App;
