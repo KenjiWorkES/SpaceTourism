@@ -18,6 +18,7 @@
     justify-content: center;
     height: 2.1rem;
     width: 2.4rem;
+    z-index: 2;
   }
 
   &__line {
@@ -46,21 +47,46 @@
   }
 
   &__nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: rgba($color-white, 0.04);
+    backdrop-filter: blur(8.1rem);
+    width: 25.4rem;
+    padding: 11.8rem 3.2rem 0;
   }
 
   &__list {
+    list-style: none;
   }
 
   &__item {
+    font-size: 1.6rem;
+    line-height: 1.92rem;
+    letter-spacing: 2.7px;
+
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
   }
 
-  &__link {
+  &__link,
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+    display: flex;
+    font-family: $font-subheading;
+    color: $color-white;
   }
 
   &__label {
+    font-weight: bold;
+    margin-right: 1.1rem;
   }
 
   &__text {
+    font-weight: normal;
+    text-transform: uppercase;
   }
 }
