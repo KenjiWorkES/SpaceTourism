@@ -5,4 +5,10 @@
       @content;
     }
   }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 64em) {
+      //650px
+      @content;
+    }
+  }
 }
