@@ -1,0 +1,32 @@
+.title {
+  &--largest {
+  }
+
+  &--large {
+  }
+
+  &--medium {
+  }
+
+  &--small {
+  }
+
+  &--smallest {
+  }
+}
+
+.subTitle {
+  &--normal {
+  }
+
+  &--condensed {
+  }
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: center;
+  color: $color-secondary;
+}
