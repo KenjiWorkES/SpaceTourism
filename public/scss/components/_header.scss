@@ -6,6 +6,11 @@
   justify-content: space-between;
   align-items: center;
 
+  @include responsive(tablet) {
+    padding-top: 0;
+    padding-right: 0;
+  }
+
   &__logo {
   }
 
@@ -19,6 +24,10 @@
     height: 2.1rem;
     width: 2.4rem;
     z-index: 2;
+
+    @include responsive(tablet) {
+      display: none;
+    }
   }
 
   &__line {
@@ -75,6 +84,16 @@
     transform: translateX(100%);
     transition: all 0.2s;
 
+    @include responsive(tablet) {
+      min-height: auto;
+      width: auto;
+      padding: 4rem 4.8rem;
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
     &--active {
       opacity: 1;
       visibility: visible;
@@ -84,6 +103,10 @@
 
   &__list {
     list-style: none;
+
+    @include responsive(tablet) {
+      display: flex;
+    }
   }
 
   &__item {
@@ -93,6 +116,10 @@
 
     &:not(:last-child) {
       margin-bottom: 3.2rem;
+
+      @include responsive(tablet) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -108,10 +135,20 @@
   &__label {
     font-weight: bold;
     margin-right: 1.1rem;
+
+    @include responsive(tablet) {
+      display: none;
+    }
   }
 
   &__text {
     font-weight: normal;
     text-transform: uppercase;
+  }
+
+  @include responsive(tablet) {
+    &__item:not(:last-child) &__text {
+      margin-right: 3.6rem;
+    }
   }
 }
