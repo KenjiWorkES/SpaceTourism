@@ -1,8 +1,12 @@
-import { HomeContent } from "../../molecules";
+import { HomeText } from "../../molecules";
+import { ExploreButton } from "../../atoms";
 const HomeContent = () => {
-  <>
-    <HomeContent />
-  </>;
+  return (
+    <>
+      <HomeText />
+      <ExploreButton />
+    </>
+  );
 };
 
 export default HomeContent;

@@ -15,4 +15,4 @@ const HomeText = () => {
   );
 };
 
-export default HomeContent;
+export default HomeText;
