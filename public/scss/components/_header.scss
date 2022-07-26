@@ -11,7 +11,27 @@
     padding-right: 0;
   }
 
+  @include responsive(desktop) {
+    padding-top: 4rem;
+  }
+
   &__logo {
+    @include responsive(desktop) {
+      margin-right: 6.4rem;
+    }
+  }
+
+  &__divider {
+    display: none;
+
+    @include responsive(desktop) {
+      position: relative;
+      display: block;
+      width: 40%;
+      margin-right: -4rem;
+      height: 1px;
+      z-index: 4;
+    }
   }
 
   &__burguer {
@@ -94,6 +114,11 @@
       transform: translateX(0);
     }
 
+    @include responsive(desktop) {
+      padding-right: 16.5rem;
+      padding-left: 12rem;
+    }
+
     &--active {
       opacity: 1;
       visibility: visible;
@@ -138,6 +163,10 @@
 
     @include responsive(tablet) {
       display: none;
+    }
+
+    @include responsive(desktop) {
+      display: block;
     }
   }
 
