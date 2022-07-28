@@ -2,7 +2,7 @@ import { DestinationItem } from "../../atoms";
 
 const DestinationControl = () => {
   return (
-    <ul className="destination__controler">
+    <ul className="destination__controller">
       <DestinationItem />
       <DestinationItem />
       <DestinationItem />

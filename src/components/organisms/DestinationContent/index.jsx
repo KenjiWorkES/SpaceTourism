@@ -5,15 +5,18 @@ const DestinationContent = () => {
   return (
     <>
       <div className="destination__container">
-        <h2>
-          <span>01</span>
+        <h2 className="title title--smallest destination__subTitle">
+          <span className="destination__number">01</span>
           Pick Your Destination
         </h2>
-        <img src="/assets/destination/image-europa.png" />
+        <img
+          className=" destination__image"
+          src="/assets/destination/image-europa.png"
+        />
       </div>
       <div className="destination__container">
         <DestinationControl />
-        <h1>Europa</h1>
+        <h1 className="title title--large destination__title">Europa</h1>
         <Paragraph>
           Don’t forget to pack your hiking boots. You’ll need them to tackle
           Olympus Mons, the tallest planetary mountain in our solar system. It’s

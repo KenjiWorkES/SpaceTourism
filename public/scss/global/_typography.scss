@@ -19,7 +19,15 @@
     }
   }
 
+  &--secondary {
+    color: $color-secondary;
+  }
+
   &--large {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   &--medium {
@@ -33,8 +41,8 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     text-align: center;
-    color: $color-secondary;
     letter-spacing: 2.7px;
+    text-transform: uppercase;
 
     @include responsive(tablet) {
       font-size: 2rem;
@@ -53,7 +61,13 @@
 
 .subTitle {
   font-family: $font-heading;
+  color: $color-white;
   font-weight: 400;
+  text-transform: uppercase;
+
+  &--secondary {
+    color: $color-secondary;
+  }
 
   &--normal {
     font-size: 2.8rem;

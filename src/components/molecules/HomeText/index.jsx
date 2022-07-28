@@ -3,7 +3,7 @@ import { Paragraph } from "../../atoms/";
 const HomeText = () => {
   return (
     <div className="home__text">
-      <h2 className="title title--smallest home__subTitle">
+      <h2 className="title title--smallest title--secondary home__subTitle">
         SO, YOU WANT TO TRAVEL TO
       </h2>
       <h1 className="title title--largest home__title">Space</h1>
