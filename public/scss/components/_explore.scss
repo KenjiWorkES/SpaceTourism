@@ -16,6 +16,11 @@
   text-transform: uppercase;
   transition: all 0.3s;
 
+  @include responsive(tablet) {
+    width: 20rem;
+    height: 20rem;
+  }
+
   cursor: pointer;
 
   &::after {
@@ -33,6 +38,11 @@
     z-index: -1;
     animation: pulse 1s infinite;
     transition: all 0.3s;
+
+    @include responsive(tablet) {
+      width: 20rem;
+      height: 20rem;
+    }
   }
 
   &:hover {
