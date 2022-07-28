@@ -8,6 +8,11 @@
     line-height: 10rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include responsive(tablet) {
+      font-size: 15rem;
+      line-height: 15rem;
+    }
   }
 
   &--large {
@@ -26,6 +31,12 @@
     text-align: center;
     color: $color-secondary;
     letter-spacing: 2.7px;
+
+    @include responsive(tablet) {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      letter-spacing: 3.375px;
+    }
   }
 }
 
