@@ -17,6 +17,9 @@
 
   @include responsive(desktop) {
     background-image: url("/public/assets/home/background-home-desktop.jpg");
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
   }
 
   &__text {
