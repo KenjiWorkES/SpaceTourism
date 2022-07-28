@@ -19,6 +19,14 @@
   @include responsive(tablet) {
     width: 20rem;
     height: 20rem;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 2px;
+  }
+
+  @include responsive(desktop) {
+    width: 23rem;
+    height: 23rem;
   }
 
   cursor: pointer;
@@ -42,6 +50,11 @@
     @include responsive(tablet) {
       width: 20rem;
       height: 20rem;
+    }
+
+    @include responsive(desktop) {
+      width: 23rem;
+      height: 23rem;
     }
   }
 
