@@ -1,12 +1,11 @@
 import { DestinationItem } from "../../atoms";
 
-const DestinationControl = () => {
+const DestinationControl = ({ items }) => {
   return (
     <ul className="destination__controller">
-      <DestinationItem />
-      <DestinationItem />
-      <DestinationItem />
-      <DestinationItem />
+      {items.map((item, index) => {
+        return <DestinationItem key={index} index={index} item={item} />;
+      })}
     </ul>
   );
 };

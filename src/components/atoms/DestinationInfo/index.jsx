@@ -1,10 +1,10 @@
-const DestinationInfo = () => {
+const DestinationInfo = ({ label, value }) => {
   return (
     <div className="destination__info">
       <label className="destination__label subTitle subTitle--secondary subTitle--condensed">
-        Avg. Distance
+        {label}
       </label>
-      <h4 className="subTitle subTitle--normal">test</h4>
+      <h4 className="subTitle subTitle--normal">{value}</h4>
     </div>
   );
 };

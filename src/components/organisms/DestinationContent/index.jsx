@@ -1,7 +1,21 @@
+import { useState } from "react";
+
+import destination from "../../../data/destination.json";
 import { DestinationControl, DestinationLogistc } from "../../molecules";
 import { Paragraph } from "../../atoms";
 
 const DestinationContent = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const selectedDestination = destination[currentIndex];
+  const controlElements = destination.map((item) => item.name);
+  const logistcElements = destination.map((item) => ({
+    distance: item.distance,
+    travel: item.travel,
+  }));
+
+  console.log(selectedDestination);
+
   return (
     <>
       <div className="destination__container">
@@ -15,14 +29,12 @@ const DestinationContent = () => {
         />
       </div>
       <div className="destination__container">
-        <DestinationControl />
-        <h1 className="title title--large destination__title">Europa</h1>
-        <Paragraph>
-          Don’t forget to pack your hiking boots. You’ll need them to tackle
-          Olympus Mons, the tallest planetary mountain in our solar system. It’s
-          two and a half times the size of Everest!
-        </Paragraph>
-        <DestinationLogistc />
+        <DestinationControl items={controlElements} />
+        <h1 className="title title--large destination__title">
+          {selectedDestination.name}
+        </h1>
+        <Paragraph>{selectedDestination.desc}</Paragraph>
+        <DestinationLogistc items={logistcElements} />
       </div>
     </>
   );

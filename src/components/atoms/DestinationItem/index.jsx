@@ -1,5 +1,5 @@
-const DestinationItem = () => {
-  return <li className="destination__item">test</li>;
+const DestinationItem = ({ index, item }) => {
+  return <li className="destination__item">{item}</li>;
 };
 
 export default DestinationItem;
