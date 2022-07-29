@@ -1,4 +1,5 @@
 .crew {
+  position: relative;
   width: 100%;
   background-image: url("../../assets/crew/background-crew-mobile.jpg");
   min-height: 100vh;
@@ -13,7 +14,14 @@
     padding-top: 13.6rem;
   }
 
+  @include responsive(desktop) {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+    padding: 21.2rem 10% 0;
+    flex-direction: row;
+  }
+
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,10 +43,26 @@
         max-width: 46rem;
         margin: 6rem auto;
       }
+
+      @include responsive(desktop) {
+        margin-top: 15.4rem;
+        align-items: flex-start;
+        width: 58%;
+        margin: 15.4rem 0;
+        max-width: none;
+      }
+    }
+
+    @include responsive(desktop) {
+      width: 42%;
     }
   }
 
   &__subTitle {
+    @include responsive(desktop) {
+      position: absolute;
+      left: 10%;
+    }
   }
 
   &__number {
@@ -51,18 +75,39 @@
 
     &--commander {
       width: 54%;
+
+      @include responsive(desktop) {
+        width: 35%;
+      }
     }
 
     &--mission {
       width: 50%;
+
+      @include responsive(desktop) {
+        width: 30%;
+      }
     }
 
     &--pilot {
       width: 63%;
+
+      @include responsive(desktop) {
+        width: 36%;
+      }
     }
 
     &--flight {
       width: 71%;
+
+      @include responsive(desktop) {
+        width: 40%;
+      }
+    }
+
+    @include responsive(desktop) {
+      position: fixed;
+      bottom: 0;
     }
   }
 
@@ -87,6 +132,10 @@
     @include responsive(tablet) {
       order: 2;
       margin-top: 4rem;
+    }
+
+    @include responsive(desktop) {
+      margin-top: 12rem;
     }
   }
 
