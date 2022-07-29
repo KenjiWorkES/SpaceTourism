@@ -30,8 +30,23 @@
   }
 
   &__image {
-    width: 50%;
     margin-top: 3.2rem;
+
+    &--commander {
+      width: 54%;
+    }
+
+    &--mission {
+      width: 50%;
+    }
+
+    &--pilot {
+      width: 63%;
+    }
+
+    &--flight {
+      width: 71%;
+    }
   }
 
   &__function {

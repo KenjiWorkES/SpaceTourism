@@ -9,6 +9,12 @@ const CrewContent = () => {
 
   const selectedCrewmate = crew[currentIndex];
 
+  const imageClasses = `crew__image crew__image--${selectedCrewmate.function.toLowerCase()}`;
+
+  const changeCrewmateHandler = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <>
       <div className="crew__container">
@@ -17,13 +23,17 @@ const CrewContent = () => {
           Meet your crew
         </h2>
         <img
-          className="crew__image"
+          className={imageClasses}
           src={"/assets/crew/" + selectedCrewmate.image}
           alt=""
         />
       </div>
       <div className="crew__container">
-        <CrewControl currentIndex={currentIndex} items={crew} />
+        <CrewControl
+          currentIndex={currentIndex}
+          items={crew}
+          onChange={changeCrewmateHandler}
+        />
         <h4 className="title title--small crew__function">
           {selectedCrewmate.function}
         </h4>
