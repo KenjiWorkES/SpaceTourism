@@ -5,6 +5,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 8.8rem 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+
+  @include responsive(tablet) {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+    padding-top: 13.6rem;
+  }
 
   &__container {
     display: flex;
@@ -12,12 +19,22 @@
     align-items: center;
     width: 100%;
 
-    &:first-child {
+    &:first-of-type {
       border-bottom: 1px solid $color-gray;
+
+      @include responsive(tablet) {
+        order: 2;
+      }
     }
 
     &:last-child {
       margin-top: 3.2rem;
+
+      @include responsive(tablet) {
+        margin-bottom: 4rem;
+        max-width: 46rem;
+        margin: 6rem auto;
+      }
     }
   }
 
@@ -53,6 +70,9 @@
     opacity: 0.25;
     margin-bottom: 0.8rem;
     margin-top: 3.2rem;
+    @include responsive(tablet) {
+      margin-top: 0;
+    }
   }
 
   &__name {
@@ -63,6 +83,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include responsive(tablet) {
+      order: 2;
+      margin-top: 4rem;
+    }
   }
 
   &__item {

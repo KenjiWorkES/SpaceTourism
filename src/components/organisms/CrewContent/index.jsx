@@ -17,11 +17,11 @@ const CrewContent = () => {
 
   return (
     <>
+      <h2 className="title title--smallest crew__subTitle">
+        <span className="crew__number">02</span>
+        Meet your crew
+      </h2>
       <div className="crew__container">
-        <h2 className="title title--smallest crew__subTitle">
-          <span className="crew__number">01</span>
-          Meet your crew
-        </h2>
         <img
           className={imageClasses}
           src={"/assets/crew/" + selectedCrewmate.image}
