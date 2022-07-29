@@ -33,6 +33,11 @@
       font-size: 8rem;
       line-height: 9.2rem;
     }
+
+    @include responsive(desktop) {
+      font-size: 10rem;
+      line-height: 11.5rem;
+    }
   }
 
   &--medium {
@@ -78,6 +83,10 @@
     font-size: 2.8rem;
     line-height: 3.2rem;
     text-align: center;
+
+    @include responsive(desktop) {
+      text-align: left;
+    }
   }
 
   &--condensed {
@@ -86,6 +95,10 @@
     line-height: 1.7rem;
     text-align: center;
     letter-spacing: 2.36px;
+
+    @include responsive(desktop) {
+      text-align: left;
+    }
   }
 }
 
