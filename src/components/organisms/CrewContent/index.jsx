@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 import { CrewControl } from "../../molecules";
 import { Paragraph } from "../../atoms";
+import crew from "../../../data/crew.json";
 
 const CrewContent = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const selectedCrewmate = crew[currentIndex];
+
   return (
     <>
       <div className="crew__container">
@@ -11,19 +18,19 @@ const CrewContent = () => {
         </h2>
         <img
           className="crew__image"
-          src="/assets/crew/image-mark-shuttleworth.png"
+          src={"/assets/crew/" + selectedCrewmate.image}
           alt=""
         />
       </div>
       <div className="crew__container">
         <CrewControl />
-        <h4 className="title title--small crew__function">Commander</h4>
-        <h1 className="title title--medium crew__name">Douglas Hurley</h1>
-        <Paragraph>
-          Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.
-        </Paragraph>
+        <h4 className="title title--small crew__function">
+          {selectedCrewmate.function}
+        </h4>
+        <h1 className="title title--medium crew__name">
+          {selectedCrewmate.name}
+        </h1>
+        <Paragraph>{selectedCrewmate.desc}</Paragraph>
       </div>
     </>
   );
