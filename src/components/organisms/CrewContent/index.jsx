@@ -1,3 +1,6 @@
+import { CrewControl } from "../../molecules";
+import { Paragraph } from "../../atoms";
+
 const CrewContent = () => {
   return (
     <>
@@ -7,24 +10,20 @@ const CrewContent = () => {
           Meet your crew
         </h2>
         <img
-          className="crew"
-          src={"/assets/crew/" + selectedDestination.image}
-          alt={"Picture of " + selectedDestination.name}
+          className="crew__image"
+          src="/assets/crew/image-mark-shuttleworth.png"
+          alt=""
         />
       </div>
-      <div className="destination__container">
-        <CrewControl
-          items={controlElements}
-          currentIndex={currentIndex}
-          onChange={changeDestinationHandler}
-        />
-        <h4 className="title title--large destination__title">
-          {selectedDestination.name}
-        </h4>
-        <h1 className="title title--large destination__title">
-          {selectedDestination.name}
-        </h1>
-        <Paragraph>{selectedDestination.desc}</Paragraph>
+      <div className="crew__container">
+        <CrewControl />
+        <h4 className="title title--small crew__function">Commander</h4>
+        <h1 className="title title--medium crew__name">Douglas Hurley</h1>
+        <Paragraph>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </Paragraph>
       </div>
     </>
   );

@@ -1,7 +1,9 @@
+import { CrewContent } from "../../organisms";
+
 const CrewPage = () => {
   return (
     <section className="crew">
-      <h1>Crew</h1>
+      <CrewContent />
     </section>
   );
 };
