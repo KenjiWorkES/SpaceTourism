@@ -14,6 +14,10 @@ const DestinationContent = () => {
     travel: item.travel,
   }));
 
+  const changeDestinationHandler = (index) => {
+    setCurrentIndex(index);
+  };
+
   console.log(selectedDestination);
 
   return (
@@ -33,6 +37,7 @@ const DestinationContent = () => {
         <DestinationControl
           items={controlElements}
           currentIndex={currentIndex}
+          onChange={changeDestinationHandler}
         />
         <h1 className="title title--large destination__title">
           {selectedDestination.name}

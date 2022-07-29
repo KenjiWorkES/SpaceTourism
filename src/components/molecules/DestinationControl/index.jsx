@@ -1,6 +1,6 @@
 import { DestinationItem } from "../../atoms";
 
-const DestinationControl = ({ items, currentIndex }) => {
+const DestinationControl = ({ items, currentIndex, onChange }) => {
   return (
     <ul className="destination__controller">
       {items.map((item, index) => {
@@ -11,10 +11,18 @@ const DestinationControl = ({ items, currentIndex }) => {
               index={index}
               item={item}
               isActive={true}
+              onChange={onChange}
             />
           );
         } else {
-          return <DestinationItem key={index} index={index} item={item} />;
+          return (
+            <DestinationItem
+              key={index}
+              index={index}
+              item={item}
+              onChange={onChange}
+            />
+          );
         }
       })}
     </ul>
