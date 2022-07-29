@@ -9,15 +9,30 @@
   padding: 8.8rem 0;
   align-items: center;
 
+  @include responsive(tablet) {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+    padding-top: 13.6rem;
+  }
+
   &__container {
     &:last-child {
       margin-top: 3.4rem;
       padding: 0 2.4rem;
+
+      @include responsive(tablet) {
+        margin-top: 6rem;
+        max-width: 48rem;
+      }
     }
   }
 
   &__subTitle {
     margin-bottom: 3.2rem;
+    @include responsive(tablet) {
+      align-self: flex-start;
+      padding-left: 2.4rem;
+      margin-bottom: 6rem;
+    }
   }
 
   &__number {
@@ -31,6 +46,10 @@
 
   &__terminology {
     margin-bottom: 0.9rem;
+
+    @include responsive(tablet) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__name {
@@ -41,6 +60,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2.6rem;
+
+    @include responsive(tablet) {
+      margin-bottom: 4.5rem;
+    }
   }
 
   &__item {
@@ -67,6 +90,14 @@
       background-color: $color-white;
       border-color: $color-white;
       color: $color-primary;
+    }
+
+    @include responsive(tablet) {
+      width: 5.8rem;
+      height: 5.8rem;
+      font-size: 2.4rem;
+      line-height: 2.75rem;
+      letter-spacing: 1.5px;
     }
   }
 }
