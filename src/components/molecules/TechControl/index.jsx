@@ -1,11 +1,22 @@
 import { TechItem } from "../../atoms";
 
-const TechControl = () => {
+const TechControl = ({ currentIndex, items, onChange }) => {
   return (
     <ul className="tech__controller">
-      <TechItem />
-      <TechItem />
-      <TechItem />
+      {items.map((item, index) => {
+        if (index === currentIndex) {
+          return (
+            <TechItem
+              key={index}
+              index={index}
+              isActive={true}
+              onChange={onChange}
+            />
+          );
+        } else {
+          return <TechItem key={index} index={index} onChange={onChange} />;
+        }
+      })}
     </ul>
   );
 };

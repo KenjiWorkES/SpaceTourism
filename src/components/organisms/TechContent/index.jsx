@@ -1,7 +1,19 @@
+import { useState } from "react";
+
 import { TechControl } from "../../molecules";
 import { Paragraph } from "../../atoms";
 
+import tech from "../../../data/tech.json";
+
 const TechContent = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const selectedTech = tech[currentIndex];
+
+  const changeTechHandler = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <>
       <h2 className="title title--smallest tech__subTitle">
@@ -11,24 +23,24 @@ const TechContent = () => {
       <div className="tech__container">
         <img
           className="tech__image"
-          src={"/assets/technology/image-spaceport-landscape.jpg"}
+          src={"/assets/technology/" + selectedTech.landscape}
           alt=""
         />
       </div>
       <div className="tech__container">
-        <TechControl />
+        <TechControl
+          currentIndex={currentIndex}
+          onChange={changeTechHandler}
+          items={tech}
+        />
         <div>
           <h4 className="subTitle subTitle--secondary subTitle--condensed tech__terminology">
             The Terminology...
           </h4>
-          <h1 className="title title--medium tech__name">SPACEPORT</h1>
-          <Paragraph>
-            A spaceport or cosmodrome is a site for launching (or receiving)
-            spacecraft, by analogy to the seaport for ships or airport for
-            aircraft. Based in the famous Cape Canaveral, our spaceport is
-            ideally situated to take advantage of the Earth’s rotation for
-            launch.
-          </Paragraph>
+          <h1 className="title title--medium tech__name">
+            {selectedTech.name}
+          </h1>
+          <Paragraph>{selectedTech.desc}</Paragraph>
         </div>
       </div>
     </>
