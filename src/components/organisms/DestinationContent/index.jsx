@@ -24,12 +24,16 @@ const DestinationContent = () => {
           Pick Your Destination
         </h2>
         <img
-          className=" destination__image"
-          src="/assets/destination/image-europa.png"
+          className="destination__image"
+          src={"/assets/destination/" + selectedDestination.image}
+          alt={"Picture of " + selectedDestination.name}
         />
       </div>
       <div className="destination__container">
-        <DestinationControl items={controlElements} />
+        <DestinationControl
+          items={controlElements}
+          currentIndex={currentIndex}
+        />
         <h1 className="title title--large destination__title">
           {selectedDestination.name}
         </h1>

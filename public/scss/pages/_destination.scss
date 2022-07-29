@@ -43,9 +43,21 @@
     line-height: 1.7rem;
     letter-spacing: 3.3625px;
     text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
 
     &:not(:last-child) {
       margin-right: 2.6rem;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $color-white;
+    }
+
+    &--active {
+      border-bottom: 3px solid $color-white;
     }
   }
 
