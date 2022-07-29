@@ -3,3 +3,4 @@ export { default as HomeText } from "./HomeText";
 export { default as DestinationLogistc } from "./DestinationLogistc";
 export { default as DestinationControl } from "./DestinationControl";
 export { default as CrewControl } from "./CrewControl";
+export { default as TechControl } from "./TechControl";
