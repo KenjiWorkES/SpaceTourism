@@ -28,6 +28,11 @@
     line-height: 6.4rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include responsive(tablet) {
+      font-size: 8rem;
+      line-height: 9.2rem;
+    }
   }
 
   &--medium {
