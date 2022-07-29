@@ -23,7 +23,7 @@ const CrewContent = () => {
         />
       </div>
       <div className="crew__container">
-        <CrewControl />
+        <CrewControl currentIndex={currentIndex} items={crew} />
         <h4 className="title title--small crew__function">
           {selectedCrewmate.function}
         </h4>
