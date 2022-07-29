@@ -21,11 +21,17 @@ const TechContent = () => {
         Space Launch 101
       </h2>
       <div className="tech__container">
-        <img
-          className="tech__image"
-          src={"/assets/technology/" + selectedTech.landscape}
-          alt=""
-        />
+        <picture>
+          <source
+            srcSet={"/assets/technology/" + selectedTech.portrait}
+            media="(min-width: 1024px)"
+          />
+          <img
+            className="tech__image"
+            src={"/assets/technology/" + selectedTech.landscape}
+            alt={"Picture of a" + selectedTech.name}
+          />
+        </picture>
       </div>
       <div className="tech__container">
         <TechControl

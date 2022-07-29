@@ -1,4 +1,5 @@
 .tech {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background-image: url("../../assets/technology/background-technology-mobile.jpg");
@@ -14,7 +15,19 @@
     padding-top: 13.6rem;
   }
 
+  @include responsive(desktop) {
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+    padding: 21.2rem 0 0 10%;
+    flex-direction: row;
+  }
+
   &__container {
+    &:first-of-type {
+      @include responsive(desktop) {
+        order: 3;
+      }
+    }
+
     &:last-child {
       margin-top: 3.4rem;
       padding: 0 2.4rem;
@@ -22,6 +35,13 @@
       @include responsive(tablet) {
         margin-top: 6rem;
         max-width: 48rem;
+      }
+
+      @include responsive(desktop) {
+        order: 1;
+        display: flex;
+        max-width: 70rem;
+        margin-top: 0;
       }
     }
   }
@@ -33,6 +53,12 @@
       padding-left: 2.4rem;
       margin-bottom: 6rem;
     }
+
+    @include responsive(desktop) {
+      position: absolute;
+      left: 10%;
+      padding-left: 0;
+    }
   }
 
   &__number {
@@ -42,6 +68,14 @@
 
   &__image {
     width: 100%;
+
+    @include responsive(desktop) {
+      width: 30%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-35%);
+    }
   }
 
   &__terminology {
@@ -64,6 +98,12 @@
     @include responsive(tablet) {
       margin-bottom: 4.5rem;
     }
+
+    @include responsive(desktop) {
+      flex-direction: column;
+      margin-bottom: 0;
+      margin-right: 8rem;
+    }
   }
 
   &__item {
@@ -84,6 +124,10 @@
 
     &:not(:last-child) {
       margin-right: 1.6rem;
+      @include responsive(desktop) {
+        margin-right: 0;
+        margin-bottom: 3.2rem;
+      }
     }
 
     &--active {
@@ -98,6 +142,14 @@
       font-size: 2.4rem;
       line-height: 2.75rem;
       letter-spacing: 1.5px;
+    }
+
+    @include responsive(desktop) {
+      width: 8rem;
+      height: 8rem;
+      font-size: 3.2rem;
+      line-height: 3.675rem;
+      letter-spacing: 2px;
     }
   }
 }
