@@ -99,7 +99,7 @@
     background-color: rgba($color-white, 0.04);
     backdrop-filter: blur(8.1rem);
     width: 25.4rem;
-    padding: 11.8rem 3.2rem 0;
+    padding: 11.8rem 0 0 3.2rem;
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
@@ -108,7 +108,7 @@
     @include responsive(tablet) {
       min-height: auto;
       width: auto;
-      padding: 4rem 4.8rem;
+      padding: 4rem 4.8rem 0;
       position: relative;
       opacity: 1;
       visibility: visible;
@@ -145,6 +145,7 @@
 
       @include responsive(tablet) {
         margin-bottom: 0;
+        margin-right: 3.6rem;
       }
     }
   }
@@ -156,6 +157,31 @@
     display: flex;
     font-family: $font-heading-condensed;
     color: $color-white;
+    padding: 0.5rem 0;
+    transition: all 0.3s;
+
+    @include responsive(tablet) {
+      margin-bottom: 0;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__link:hover {
+    border-right: 4px solid $color-white;
+
+    @include responsive(tablet) {
+      border-right: none;
+      border-bottom: 4px solid $color-white;
+    }
+  }
+
+  &__link--active {
+    border-right: 4px solid $color-white;
+
+    @include responsive(tablet) {
+      border-right: none;
+      border-bottom: 4px solid $color-white;
+    }
   }
 
   &__label {
@@ -174,11 +200,5 @@
   &__text {
     font-weight: normal;
     text-transform: uppercase;
-  }
-
-  @include responsive(tablet) {
-    &__item:not(:last-child) &__text {
-      margin-right: 3.6rem;
-    }
   }
 }

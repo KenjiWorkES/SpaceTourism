@@ -16,7 +16,7 @@ const Header = () => {
     <header className="header">
       <img src="/assets/shared/logo.svg" alt="" className="header__logo" />
       <hr className="header__divider" />
-      <HeaderNav isActive={active} />
+      <HeaderNav isActive={active} onToggle={toggleSidebar} />
       <button onClick={toggleSidebar} className="header__burguer">
         <span className={burguerClasses}></span>
       </button>
