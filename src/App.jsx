@@ -1,5 +1,6 @@
 import "./App.scss";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import {
   HomePage,
@@ -10,14 +11,22 @@ import {
 import Layout from "./layout";
 
 function App() {
+  const location = useLocation();
+
+  console.log(location);
+
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/destination" element={<DestinationPage />} />
-        <Route path="/crew" element={<CrewPage />} />
-        <Route path="/technology" element={<TechnologyPage />} />
-      </Routes>
+      <TransitionGroup>
+        <CSSTransition key={location.key} timeout={300} classNames="fade">
+          <Routes location={location}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/destination" element={<DestinationPage />} />
+            <Route path="/crew" element={<CrewPage />} />
+            <Route path="/technology" element={<TechnologyPage />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
     </Layout>
   );
 }

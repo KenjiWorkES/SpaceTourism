@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 const HeaderItem = ({ index, text, link, onClick }) => {
-  console.log(onClick);
-
   return (
     <li className="header__item" onClick={onClick}>
       <NavLink
