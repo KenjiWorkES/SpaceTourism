@@ -1,5 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 const ExploreButton = () => {
-  return <button className="explore">Explore</button>;
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    navigate("/destination");
+  };
+
+  return (
+    <button onClick={onClickHandler} className="explore">
+      Explore
+    </button>
+  );
 };
 
 export default ExploreButton;
