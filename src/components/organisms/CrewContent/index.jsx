@@ -25,7 +25,7 @@ const CrewContent = () => {
         <img
           className={imageClasses}
           src={"/assets/crew/" + selectedCrewmate.image}
-          alt=""
+          alt={"Imagem do " + selectedCrewmate.name}
         />
       </div>
       <div className="crew__container">

@@ -1,11 +1,10 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../utils/test-utils";
 import userEvent from "@testing-library/user-event";
 import { HomeContent } from "../../organisms";
-import { BrowserRouter } from "react-router-dom";
 
 test("check if exist Explore Button", async () => {
-  render(<HomeContent />, { wrapper: BrowserRouter });
+  render(<HomeContent />);
 
   const exploreButton = screen.getByRole("button", { name: /explore/i });
 
@@ -14,7 +13,7 @@ test("check if exist Explore Button", async () => {
 
 test("test the explore button click", async () => {
   const user = userEvent.setup();
-  render(<HomeContent />, { wrapper: BrowserRouter });
+  render(<HomeContent />);
 
   const exploreButton = screen.getByRole("button", { name: /explore/i });
 
