@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  max-width: 144rem;
   position: fixed;
   z-index: 100;
   padding: 2.4rem;
@@ -14,6 +15,8 @@
 
   @include responsive(desktop) {
     padding-top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__logo {
@@ -58,7 +61,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       width: 2.4rem;
       height: 3px;
       background-color: $color-secondary;
