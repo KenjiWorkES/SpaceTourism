@@ -1,9 +1,11 @@
-import { CrewContent } from "../../organisms";
+import { CrewContent } from '../../organisms';
 
 const CrewPage = () => {
   return (
     <section className="crew">
-      <CrewContent />
+      <div className="crew__limit">
+        <CrewContent />
+      </div>
     </section>
   );
 };

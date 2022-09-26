@@ -1,4 +1,4 @@
-import { TechContent } from "../../organisms";
+import { TechContent } from '../../organisms';
 
 const TechnologyPage = () => {
   return (

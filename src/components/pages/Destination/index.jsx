@@ -1,9 +1,11 @@
-import { DestinationContent } from "../../organisms";
+import { DestinationContent } from '../../organisms';
 
 const DestinationPage = () => {
   return (
     <section className="destination">
-      <DestinationContent />
+      <div className="destination__limit">
+        <DestinationContent />
+      </div>
     </section>
   );
 };

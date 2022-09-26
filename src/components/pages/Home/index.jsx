@@ -1,9 +1,11 @@
-import { HomeContent } from "../../organisms";
+import { HomeContent } from '../../organisms';
 
 const HomePage = () => {
   return (
     <section className="home">
-      <HomeContent />
+      <div className="home__limit">
+        <HomeContent />
+      </div>
     </section>
   );
 };
